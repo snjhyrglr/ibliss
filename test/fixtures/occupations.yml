@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  insured: one
+  name: MyString
+  employer_name: MyString
+  employer_address: MyString
+  business_type: MyString
+
+two:
+  insured: two
+  name: MyString
+  employer_name: MyString
+  employer_address: MyString
+  business_type: MyString

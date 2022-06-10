@@ -1,0 +1,56 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Insureds</h1>
+
+  <div id="insureds">
+
+    <div class="table-responsive mb-2">
+      <table class="table table-stripped table-hover">
+        <thead>
+          <tr class="text-nowrap text-center">
+            <td>Cooperative</td>
+            <td>Branch</td>
+            <td>Insured Full name</td>
+            <td>Birth date</td>
+            <td>Gender</td>
+            <td>Age</td>
+            <td>Premium</td>
+            <td>Action</td>
+          </tr>
+        </thead>
+        <tbody>
+          <% @insureds.each do |insured| %>
+          <tr class="text-nowrap">
+            <td><%= insured.cooperative.abbreviation %></td>
+            <td><%= insured.cooperative_branch %></td>
+            <td><%= insured.full_name %></td>
+            <td><%= insured.birthdate %></td>
+            <td><%= insured.gender %></td>
+            <td><%= insured.age %></td>
+            <td><%= insured.premium %></td>
+          <td><%= link_to 'Edit', edit_insured_path(insured), class: "btn btn-outline-info" %> <%= link_to 'Delete', insured_path(insured), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-outline-danger" %></td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+
+  </div>
+
+  <table>
+    <td>
+      <%= link_to "New insured", new_insured_path, class: "btn btn-outline-success" %>
+    </td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td>
+      <%= form_tag  import_insureds_path, multipart: true do %>
+        <%= file_field_tag :file, class: "btn btn-outline-white" %>
+        <%= submit_tag "Import", class: "btn btn-outline-primary" %>
+      <% end %>
+    </td>
+  </table>
+</div>

@@ -1,0 +1,28 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <h1>Cooperative branches</h1>
+
+  <table class="table table-stripped table-hover">
+      <thead>
+        <tr>
+          <th>Cooperative</th>
+          <th>Branch</th>
+          <th>Address</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+      <% @cooperative_branches.each do |cb| %>
+        <tr class="text-nowrap">
+          <td><%= cb.cooperative.name %></td>
+          <td><%= cb.name %></td>
+          <td><%= cb.address %></td>
+          <td><%= link_to 'Edit', edit_cooperative_branch_path(cb), class: "btn btn-outline-info" %> <%= link_to 'Delete', cooperative_branch_path(cb), data: { turbo_method: :delete, turbo_confirm: "Are you sure?" }, class: "btn btn-outline-danger" %></td>
+        </tr>
+      </tbody>
+      <% end %>
+    </table>
+
+  <%= link_to "New cooperative branch", new_cooperative_branch_path, class: "btn btn-outline-success" %>
+</div>

@@ -1,0 +1,39 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  cooperative: one
+  cooperative_branch: one
+  last_name: MyString
+  first_name: MyString
+  middle_name: MyString
+  suffix: MyString
+  birthdate: 2022-05-10
+  gender: MyString
+  age: 1
+  civil_status: MyString
+  place_of_birth: MyString
+  id_type: MyString
+  id_no: MyString
+  TIN_no: MyString
+  nationality: MyString
+  address: MyString
+  premium: 9.99
+
+two:
+  cooperative: two
+  cooperative_branch: two
+  last_name: MyString
+  first_name: MyString
+  middle_name: MyString
+  suffix: MyString
+  birthdate: 2022-05-10
+  gender: MyString
+  age: 1
+  civil_status: MyString
+  place_of_birth: MyString
+  id_type: MyString
+  id_no: MyString
+  TIN_no: MyString
+  nationality: MyString
+  address: MyString
+  premium: 9.99

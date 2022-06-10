@@ -1,0 +1,12 @@
+<div class="container">
+  <p style="color: green"><%= notice %></p>
+
+  <%= render @insured %>
+
+  <div>
+    <%= link_to "Edit this insured", edit_insured_path(@insured) %> |
+    <%= link_to "Back to insureds", insureds_path %>
+
+    <%= button_to "Destroy this insured", @insured, method: :delete %>
+  </div>
+</div>

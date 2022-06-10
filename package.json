@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@nathanvda/cocoon": "^1.2.14",
+    "cocoon-js": "^0.0.5",
+    "stimulus-rails-nested-form": "^4.0.0"
+  }
+}

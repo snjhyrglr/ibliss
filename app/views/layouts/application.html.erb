@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>1CISP</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+
+  <body class="d-flex flex-column">
+    <main>
+      <%= render 'layouts/navigation'%>
+      <div class="page-content">
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p> 
+        <%= yield %>
+      </div>
+    </main>
+  </body>
+</html>
